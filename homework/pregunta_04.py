@@ -4,7 +4,8 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
-
+from pregunta_01 import limpiar
+from collections import Counter
 
 def pregunta_04():
     """
@@ -26,3 +27,14 @@ def pregunta_04():
      ('12', 3)]
 
     """
+    doc=limpiar()
+    mes=[linea[2][5:7]for linea in doc]
+    lista=list(Counter(mes).items())
+    lista=sorted(lista)
+    return lista
+
+
+if __name__=="__main__":
+    
+    print(pregunta_04())
+

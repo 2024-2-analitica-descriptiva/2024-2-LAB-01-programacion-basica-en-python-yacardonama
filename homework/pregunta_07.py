@@ -4,7 +4,7 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
-
+from pregunta_01 import limpiar
 
 def pregunta_07():
     """
@@ -25,3 +25,22 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
+    doc=limpiar()
+    letras=[linea[0] for linea in doc]
+    numeros=[linea[1] for linea in doc]
+    lista_enteros = [int(numero) for numero in numeros]
+    completo=[[numero, letra] for numero, letra in zip(lista_enteros,letras)]
+    
+    diccionario = {numero: [letra for numero_interno, letra in completo if numero_interno == numero] 
+                  for numero, _ in completo}
+    organizado=sorted(diccionario.items())
+
+    return organizado
+
+
+
+if __name__=="__main__":
+    
+    print(pregunta_07())
+
+

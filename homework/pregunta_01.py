@@ -5,6 +5,12 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
+def limpiar():
+    abrir= open("files\\input\\data.csv","r").readlines()
+    sin_salto=[linea.replace("\n","") for linea in abrir]
+    separado_tab=[string.split("\t") for string in sin_salto]
+    return separado_tab
+
 
 def pregunta_01():
     """
@@ -14,3 +20,10 @@ def pregunta_01():
     214
 
     """
+    doc=limpiar()
+    suma= sum(int(doc[1]) for doc in doc)
+    return suma
+
+if __name__=="__main__":
+    
+    print(pregunta_01())

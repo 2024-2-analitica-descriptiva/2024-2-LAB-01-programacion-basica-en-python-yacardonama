@@ -5,6 +5,7 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
+from pregunta_01 import limpiar
 
 def pregunta_10():
     """
@@ -20,3 +21,20 @@ def pregunta_10():
 
 
     """
+    doc=limpiar()
+    col1=[linea[0] for linea in doc]
+    
+    col4=[linea[3] for linea in doc]
+    lista_col4= [linea.split(",") for linea in col4]
+    ncol4=[len(linea) for linea in lista_col4]
+
+    col5=[linea[4] for linea in doc]
+    lista_col5= [linea.split(",") for linea in col5]
+    ncol5=[len(linea) for linea in lista_col5]
+    
+    lista_tuplas=list(zip(col1,ncol4,ncol5))
+    return lista_tuplas
+
+if __name__=="__main__":
+    
+    print(pregunta_10())
