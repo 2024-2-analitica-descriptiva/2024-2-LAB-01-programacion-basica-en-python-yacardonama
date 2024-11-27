@@ -11,7 +11,6 @@ def limpiar():
     separado_tab=[string.split("\t") for string in sin_salto]
     return separado_tab
 
-
 def pregunta_01():
     """
     Retorne la suma de la segunda columna.
@@ -21,7 +20,7 @@ def pregunta_01():
 
     """
     doc=limpiar()
-    suma= sum(int(doc[1]) for doc in doc)
+    suma= sum(int(linea[1]) for linea in doc)
     return suma
 
 if __name__=="__main__":

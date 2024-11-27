@@ -4,7 +4,12 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
-from pregunta_01 import limpiar
+#from pregunta_01 import limpiar
+def limpiar():
+    abrir= open("files\\input\\data.csv","r").readlines()
+    sin_salto=[linea.replace("\n","") for linea in abrir]
+    separado_tab=[string.split("\t") for string in sin_salto]
+    return separado_tab
 
 def pregunta_07():
     """
@@ -36,8 +41,6 @@ def pregunta_07():
     organizado=sorted(diccionario.items())
 
     return organizado
-
-
 
 if __name__=="__main__":
     
