@@ -12,6 +12,7 @@ def limpiar():
     return separado_tab
 
 
+
 #from pregunta_07 import pregunta_07
 def pregunta_07():
     """
