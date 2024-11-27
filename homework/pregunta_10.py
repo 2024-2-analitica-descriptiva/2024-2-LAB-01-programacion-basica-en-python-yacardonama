@@ -20,7 +20,7 @@ def pregunta_10():
 
 
     """
-    abrir= open("files\\input\\data.csv","r").readlines()
+    abrir= open(r"..\files\input\data.csv","r").readlines()
     sin_salto=[linea.replace("\n","") for linea in abrir]
     separado_tab=[string.split("\t") for string in sin_salto]
 
