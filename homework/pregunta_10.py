@@ -6,14 +6,6 @@ utilizar pandas, numpy o scipy.
 """
 
 
-#from pregunta_01 import limpiar
-def limpiar():
-    abrir= open("files\\input\\data.csv","r").readlines()
-    sin_salto=[linea.replace("\n","") for linea in abrir]
-    separado_tab=[string.split("\t") for string in sin_salto]
-    return separado_tab
-
-
 def pregunta_10():
     """
     Retorne una lista de tuplas contengan por cada tupla, la letra de la
@@ -28,7 +20,11 @@ def pregunta_10():
 
 
     """
-    doc=limpiar()
+    abrir= open("files\\input\\data.csv","r").readlines()
+    sin_salto=[linea.replace("\n","") for linea in abrir]
+    separado_tab=[string.split("\t") for string in sin_salto]
+
+    doc=separado_tab
     col1=[linea[0] for linea in doc]
     
     col4=[linea[3] for linea in doc]

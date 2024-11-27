@@ -6,13 +6,6 @@ utilizar pandas, numpy o scipy.
 """
 
 
-#from pregunta_01 import limpiar
-def limpiar():
-    abrir= open("files\\input\\data.csv","r").readlines()
-    sin_salto=[linea.replace("\n","") for linea in abrir]
-    separado_tab=[string.split("\t") for string in sin_salto]
-    return separado_tab
-
 def pregunta_12():
     """
     Genere un diccionario que contengan como clave la columna 1 y como valor
@@ -22,7 +15,10 @@ def pregunta_12():
     {'A': 177, 'B': 187, 'C': 114, 'D': 136, 'E': 324}
 
     """
-    doc=limpiar()
+    abrir= open("files\\input\\data.csv","r").readlines()
+    sin_salto=[linea.replace("\n","") for linea in abrir]
+    separado_tab=[string.split("\t") for string in sin_salto]
+    doc=separado_tab
     col1=[linea[0] for linea in doc]
     
     col5=[linea[4] for linea in doc]

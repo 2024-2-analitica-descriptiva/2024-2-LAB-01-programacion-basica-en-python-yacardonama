@@ -5,13 +5,6 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
-#from pregunta_01 import limpiar
-def limpiar():
-    abrir= open("files\\input\\data.csv","r").readlines()
-    sin_salto=[linea.replace("\n","") for linea in abrir]
-    separado_tab=[string.split("\t") for string in sin_salto]
-    return separado_tab
-
 def pregunta_07():
     """
     Retorne una lista de tuplas que asocien las columnas 0 y 1. Cada tupla
@@ -31,7 +24,10 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
-    doc=limpiar()
+    abrir= open("files\\input\\data.csv","r").readlines()
+    sin_salto=[linea.replace("\n","") for linea in abrir]
+    separado_tab=[string.split("\t") for string in sin_salto]
+    doc=separado_tab
     letras=[linea[0] for linea in doc]
     numeros=[linea[1] for linea in doc]
     lista_enteros = [int(numero) for numero in numeros]

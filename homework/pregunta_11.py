@@ -5,13 +5,6 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
-#from pregunta_01 import limpiar
-def limpiar():
-    abrir= open("files\\input\\data.csv","r").readlines()
-    sin_salto=[linea.replace("\n","") for linea in abrir]
-    separado_tab=[string.split("\t") for string in sin_salto]
-    return separado_tab
-
 def pregunta_11():
     """
     Retorne un diccionario que contengan la suma de la columna 2 para cada
@@ -22,7 +15,10 @@ def pregunta_11():
 
 
     """
-    doc=limpiar()
+    abrir= open("files\\input\\data.csv","r").readlines()
+    sin_salto=[linea.replace("\n","") for linea in abrir]
+    separado_tab=[string.split("\t") for string in sin_salto]
+    doc=separado_tab
     col2=[linea[1] for linea in doc]
     col2_int=[int(numero) for numero in col2]
     col4=[linea[3] for linea in doc]

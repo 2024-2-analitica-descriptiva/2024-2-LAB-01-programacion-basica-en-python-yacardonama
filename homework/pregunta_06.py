@@ -5,14 +5,6 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
-#from pregunta_01 import limpiar
-def limpiar():
-    abrir= open("files\\input\\data.csv","r").readlines()
-    sin_salto=[linea.replace("\n","") for linea in abrir]
-    separado_tab=[string.split("\t") for string in sin_salto]
-    return separado_tab
-
-
 def pregunta_06():
     """
     La columna 5 codifica un diccionario donde cada cadena de tres letras
@@ -33,7 +25,10 @@ def pregunta_06():
      ('jjj', 5, 17)]
 
     """
-    doc=limpiar()
+    abrir= open("files\\input\\data.csv","r").readlines()
+    sin_salto=[linea.replace("\n","") for linea in abrir]
+    separado_tab=[string.split("\t") for string in sin_salto]
+    doc=separado_tab
     col5=[linea[4] for linea in doc]
     lista_filas= [linea.split(",") for linea in col5]
     lista_cv=[cv for listita in lista_filas for cv in listita]
