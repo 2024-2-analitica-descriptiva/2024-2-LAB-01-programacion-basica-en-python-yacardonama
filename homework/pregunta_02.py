@@ -7,6 +7,7 @@ utilizar pandas, numpy o scipy.
 #from pregunta_01 import limpiar
 from collections import Counter
 
+
 def limpiar():
     abrir= open("files\\input\\data.csv","r").readlines()
     sin_salto=[linea.replace("\n","") for linea in abrir]
