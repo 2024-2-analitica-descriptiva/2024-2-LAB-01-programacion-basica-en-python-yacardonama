@@ -7,28 +7,12 @@ utilizar pandas, numpy o scipy.
 
 #from pregunta_07 import pregunta_07
 def pregunta_07():
-    """
-    Retorne una lista de tuplas que asocien las columnas 0 y 1. Cada tupla
-    contiene un valor posible de la columna 2 y una lista con todas las letras
-    asociadas (columna 1) a dicho valor de la columna 2.
 
-    Rta/
-    [(0, ['C']),
-     (1, ['E', 'B', 'E']),
-     (2, ['A', 'E']),
-     (3, ['A', 'B', 'D', 'E', 'E', 'D']),
-     (4, ['E', 'B']),
-     (5, ['B', 'C', 'D', 'D', 'E', 'E', 'E']),
-     (6, ['C', 'E', 'A', 'B']),
-     (7, ['A', 'C', 'E', 'D']),
-     (8, ['E', 'D', 'E', 'A', 'B']),
-     (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
-
-    """
-    abrir= open(r"..\files\input\data.csv","r").readlines()
+    abrir= open("./files/input/data.csv","r").readlines() #ruta en colaboración con Maria
     sin_salto=[linea.replace("\n","") for linea in abrir]
     separado_tab=[string.split("\t") for string in sin_salto]
     doc=separado_tab
+    
     letras=[linea[0] for linea in doc]
     numeros=[linea[1] for linea in doc]
     lista_enteros = [int(numero) for numero in numeros]

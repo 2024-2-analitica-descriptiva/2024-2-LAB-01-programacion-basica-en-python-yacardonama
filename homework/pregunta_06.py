@@ -25,9 +25,10 @@ def pregunta_06():
      ('jjj', 5, 17)]
 
     """
-    abrir= open(r"..\files\input\data.csv","r").readlines()
+    abrir= open("./files/input/data.csv","r").readlines() #ruta en colaboración con Maria
     sin_salto=[linea.replace("\n","") for linea in abrir]
     separado_tab=[string.split("\t") for string in sin_salto]
+    
     doc=separado_tab
     col5=[linea[4] for linea in doc]
     lista_filas= [linea.split(",") for linea in col5]

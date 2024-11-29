@@ -4,6 +4,17 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
+#import os
+
+#print("Directorio de trabajo actual:", os.getcwd())
+
+path="./files/input/data.csv"
+#path= r"C:\Users\yuanc\Documents\A Descriptiva\Laboratorios\2024-2-LAB-01-programacion-basica-en-python-yacardonama\files\input\data.csv"
+with open(path,"r") as file:
+     datos = file.readlines()
+
+datos=[linea.replace("\n","") for linea in datos]
+datos=[linea.split("\t") for linea in datos]
 
 def pregunta_01():
     """
@@ -14,13 +25,12 @@ def pregunta_01():
 
     """
     
-    abrir= open(r"..\files\input\data.csv","r").readlines()
-    sin_salto=[linea.replace("\n","") for linea in abrir]
-    separado_tab=[string.split("\t") for string in sin_salto]
-    doc=separado_tab
-    suma= sum(int(linea[1]) for linea in doc)
+    suma=0
+    for linea in datos:
+        suma += int(linea[1])
+    
     return suma
 
-if __name__=="__main__":
+""" if __name__=="__main__":
     
-    print(pregunta_01())
+    print(pregunta_01()) """

@@ -15,9 +15,10 @@ def pregunta_05():
     [('A', 9, 2), ('B', 9, 1), ('C', 9, 0), ('D', 8, 3), ('E', 9, 1)]
 
     """
-    abrir= open(r"..\files\input\data.csv","r").readlines()
+    abrir= open("./files/input/data.csv","r").readlines() #ruta en colaboración con Maria
     sin_salto=[linea.replace("\n","") for linea in abrir]
     separado_tab=[string.split("\t") for string in sin_salto]
+    
     doc=separado_tab
     letras=[linea[0] for linea in doc]
     col2=[linea[1] for linea in doc]

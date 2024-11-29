@@ -15,9 +15,10 @@ def pregunta_11():
 
 
     """
-    abrir= open(r"..\files\input\data.csv","r").readlines()
+    abrir= open("./files/input/data.csv","r").readlines() #ruta en colaboración con Maria
     sin_salto=[linea.replace("\n","") for linea in abrir]
     separado_tab=[string.split("\t") for string in sin_salto]
+    
     doc=separado_tab
     col2=[linea[1] for linea in doc]
     col2_int=[int(numero) for numero in col2]
