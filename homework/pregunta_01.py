@@ -4,12 +4,8 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
-#import os
-
-#print("Directorio de trabajo actual:", os.getcwd())
 
 path="./files/input/data.csv"
-#path= r"C:\Users\yuanc\Documents\A Descriptiva\Laboratorios\2024-2-LAB-01-programacion-basica-en-python-yacardonama\files\input\data.csv"
 with open(path,"r") as file:
      datos = file.readlines()
 
@@ -31,6 +27,6 @@ def pregunta_01():
     
     return suma
 
-""" if __name__=="__main__":
+if __name__=="__main__":
     
-    print(pregunta_01()) """
+    print(pregunta_01())

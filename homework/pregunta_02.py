@@ -7,8 +7,6 @@ utilizar pandas, numpy o scipy.
 
 from collections import Counter
 
-
-
 def pregunta_02():
     """
     Retorne la cantidad de registros por cada letra de la primera columna como
@@ -18,7 +16,7 @@ def pregunta_02():
     [('A', 8), ('B', 7), ('C', 5), ('D', 6), ('E', 14)]
 
     """
-    abrir= open("./files/input/data.csv","r").readlines() #ruta en colaboración con Maria
+    abrir= open("./files/input/data.csv","r").readlines()
 
     sin_salto=[linea.replace("\n","") for linea in abrir]
     separado_tab=[string.split("\t") for string in sin_salto]

@@ -14,9 +14,10 @@ def pregunta_03():
     [('A', 53), ('B', 36), ('C', 27), ('D', 31), ('E', 67)]
 
     """
-    abrir= open("./files/input/data.csv","r").readlines() #ruta en colaboración con Maria
+    abrir= open("./files/input/data.csv","r").readlines() 
     sin_salto=[linea.replace("\n","") for linea in abrir]
     separado_tab=[string.split("\t") for string in sin_salto]
+    
     doc=separado_tab
     col1=[linea[0] for linea in doc]
     col2=[linea[1] for linea in doc]

@@ -5,10 +5,9 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
-#from pregunta_07 import pregunta_07
 def pregunta_07():
 
-    abrir= open("./files/input/data.csv","r").readlines() #ruta en colaboración con Maria
+    abrir= open("./files/input/data.csv","r").readlines()
     sin_salto=[linea.replace("\n","") for linea in abrir]
     separado_tab=[string.split("\t") for string in sin_salto]
     doc=separado_tab
